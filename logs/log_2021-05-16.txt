@@ -1,0 +1,631 @@
+[2021-05-16 8:33:37.181375] [debug] localhost otrium root dMax99@#
+[2021-05-16 8:33:37.182378] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 8:33:37.183599] [debug] {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 8:33:37.184950] [debug] [:vat, 0.79]
+[2021-05-16 8:33:37.185267] [debug] [:start_date, 2018-05-01]
+[2021-05-16 8:33:37.185343] [debug] [:end_date, 2018-05-07]
+[2021-05-16 8:33:37.189366] [debug] [{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 8:33:54.261399] [debug] localhost otrium root dMax99@#
+[2021-05-16 8:33:54.262564] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 8:33:54.262665] [debug] {":start_date":"2018-05-01",":end_date":"2018-05-07",":vat":"0.79"}
+[2021-05-16 8:33:54.262815] [debug] [:start_date, 2018-05-01]
+[2021-05-16 8:33:54.263284] [debug] [:end_date, 2018-05-07]
+[2021-05-16 8:33:54.263782] [debug] [:vat, 0.79]
+[2021-05-16 8:33:54.267513] [debug] [{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 6:34:48.581445] [debug] localhost otrium root dMax99@#
+[2021-05-16 6:35:03.465945] [debug] localhost otrium root dMax99@#
+[2021-05-16 8:36:46.717000] [debug] localhost otrium root dMax99@#
+[2021-05-16 8:36:46.718014] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 8:36:46.718307] [debug] {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 8:36:46.718848] [debug] [:vat, 0.79]
+[2021-05-16 8:36:46.719043] [debug] [:start_date, 2018-05-01]
+[2021-05-16 8:36:46.719656] [debug] [:end_date, 2018-05-07]
+[2021-05-16 8:36:46.721626] [debug] [{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 6:37:50.330241] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:38:31.227749] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:39:00.846421] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:39:14.140932] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:39:14.145426] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:48:51.610202] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:49:11.355892] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:49:36.979855] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:49:54.718719] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:50:01.197030] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:53:34.336395] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:53:47.894254] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:54:51.567475] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:54:51.576581] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:54:51.577909] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 6:54:51.578010] [debug] {":vat":0.79,":start_date":2018,":end_date":2018}
+[2021-05-16 6:54:51.582880] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 6:54:51.582959] [debug] {":start_date":2018,":end_date":2018,":vat":"0.79"}
+[2021-05-16 6:55:17.720231] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:55:17.725699] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:55:17.727835] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 6:55:17.727927] [debug] {":vat":0.79,":start_date":2018,":end_date":2018}
+[2021-05-16 6:55:17.735970] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 6:55:17.736042] [debug] {":start_date":2018,":end_date":2018,":vat":"0.79"}
+[2021-05-16 6:55:54.050853] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:55:54.055111] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:55:54.056042] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 6:55:54.056165] [debug] {":vat":0.79,":start_date":2018,":end_date":2018}
+[2021-05-16 6:55:54.056196] [debug] [:vat, 0.79]
+[2021-05-16 6:55:54.056850] [debug] [:start_date, 2018]
+[2021-05-16 6:55:54.056896] [debug] [:end_date, 2018]
+[2021-05-16 6:55:54.058880] [debug] []
+[2021-05-16 6:55:54.060262] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:55:54.064024] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 6:55:54.064105] [debug] {":start_date":2018,":end_date":2018,":vat":"0.79"}
+[2021-05-16 6:55:54.064152] [debug] [:start_date, 2018]
+[2021-05-16 6:55:54.064188] [debug] [:end_date, 2018]
+[2021-05-16 6:55:54.064223] [debug] [:vat, 0.79]
+[2021-05-16 6:55:54.069519] [debug] []
+[2021-05-16 6:59:05.596894] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:59:05.603362] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:59:05.604790] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 6:59:05.604909] [debug] {":vat":0.79,":start_date":2018,":end_date":2018}
+[2021-05-16 6:59:05.605386] [debug] [:vat, 0.79]
+[2021-05-16 6:59:05.605503] [debug] [:start_date, 2018]
+[2021-05-16 6:59:05.605547] [debug] [:end_date, 2018]
+[2021-05-16 6:59:05.608174] [debug] []
+[2021-05-16 6:59:05.610629] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 6:59:05.613236] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 6:59:05.613363] [debug] {":start_date":2018,":end_date":2018,":vat":"0.79"}
+[2021-05-16 6:59:05.613409] [debug] [:start_date, 2018]
+[2021-05-16 6:59:05.613459] [debug] [:end_date, 2018]
+[2021-05-16 6:59:05.613487] [debug] [:vat, 0.79]
+[2021-05-16 6:59:05.619311] [debug] []
+[2021-05-16 8:59:18.508272] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 8:59:18.512137] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 8:59:18.513571] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 8:59:18.513694] [debug] {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 8:59:18.516370] [debug] [:vat, 0.79]
+[2021-05-16 8:59:18.518584] [debug] [:start_date, 2018-05-01]
+[2021-05-16 8:59:18.518713] [debug] [:end_date, 2018-05-07]
+[2021-05-16 8:59:18.523061] [debug] [{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 8:59:19.970588] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 8:59:19.976392] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 8:59:19.978106] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 8:59:19.979254] [debug] {":start_date":"2018-05-01",":end_date":"2018-05-07",":vat":"0.79"}
+[2021-05-16 8:59:19.979929] [debug] [:start_date, 2018-05-01]
+[2021-05-16 8:59:19.980031] [debug] [:end_date, 2018-05-07]
+[2021-05-16 8:59:19.981316] [debug] [:vat, 0.79]
+[2021-05-16 8:59:19.986598] [debug] [{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:00:15.236483] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:00:15.240797] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:00:15.242619] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:00:15.242727] [debug] {":vat":0.79,":start_date":2018,":end_date":2018}
+[2021-05-16 7:00:15.242774] [debug] [:vat, 0.79]
+[2021-05-16 7:00:15.242827] [debug] [:start_date, 2018]
+[2021-05-16 7:00:15.242855] [debug] [:end_date, 2018]
+[2021-05-16 7:00:15.245624] [debug] []
+[2021-05-16 7:00:15.246804] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:00:15.249407] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:00:15.249524] [debug] {":start_date":2018,":end_date":2018,":vat":"0.79"}
+[2021-05-16 7:00:15.249574] [debug] [:start_date, 2018]
+[2021-05-16 7:00:15.249607] [debug] [:end_date, 2018]
+[2021-05-16 7:00:15.249634] [debug] [:vat, 0.79]
+[2021-05-16 7:00:15.254113] [debug] []
+[2021-05-16 7:00:21.801409] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:00:21.810879] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:00:21.812454] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:00:21.815493] [debug] {":vat":0.79,":start_date":2018,":end_date":2018}
+[2021-05-16 7:00:21.815623] [debug] [:vat, 0.79]
+[2021-05-16 7:00:21.817080] [debug] [:start_date, 2018]
+[2021-05-16 7:00:21.817166] [debug] [:end_date, 2018]
+[2021-05-16 7:00:21.820369] [debug] []
+[2021-05-16 7:01:22.885688] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:01:22.890058] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:01:22.892966] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:01:22.893100] [debug] params: {":vat":0.79,":start_date":2018,":end_date":2018}
+[2021-05-16 7:01:22.893127] [debug] [:vat, 0.79]
+[2021-05-16 7:01:22.893148] [debug] [:start_date, 2018]
+[2021-05-16 7:01:22.893161] [debug] [:end_date, 2018]
+[2021-05-16 7:01:22.897166] [debug] query_data: []
+[2021-05-16 7:02:14.974308] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:02:14.981854] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:02:14.982870] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:02:14.982948] [debug] params: {":vat":0.79,":start_date":"2018",":end_date":"2018"}
+[2021-05-16 7:02:14.982978] [debug] [:vat, 0.79]
+[2021-05-16 7:02:14.983006] [debug] [:start_date, 2018]
+[2021-05-16 7:02:14.983025] [debug] [:end_date, 2018]
+[2021-05-16 7:02:14.984636] [debug] query_data: []
+[2021-05-16 9:02:36.388881] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 9:02:36.391155] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 9:02:36.393045] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 9:02:36.393249] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 9:02:36.398734] [debug] [:vat, 0.79]
+[2021-05-16 9:02:36.402959] [debug] [:start_date, 2018-05-01]
+[2021-05-16 9:02:36.403134] [debug] [:end_date, 2018-05-07]
+[2021-05-16 9:02:36.406882] [debug] query_data: [{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:02:47.954858] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:02:47.962517] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:02:47.963821] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:02:47.963901] [debug] params: {":vat":0.79,":start_date":"2018",":end_date":"2018"}
+[2021-05-16 7:02:47.963929] [debug] [:vat, 0.79]
+[2021-05-16 7:02:47.963977] [debug] [:start_date, 2018]
+[2021-05-16 7:02:47.964020] [debug] [:end_date, 2018]
+[2021-05-16 7:02:47.965625] [debug] query_data: []
+[2021-05-16 7:03:13.980900] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:03:13.985328] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:03:13.987314] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:03:13.987430] [debug] params: {":vat":0.79,":start_date":"2018",":end_date":"2018"}
+[2021-05-16 7:03:13.987477] [debug] [:vat, 0.79]
+[2021-05-16 7:03:13.987514] [debug] [:start_date, 2018]
+[2021-05-16 7:03:13.987543] [debug] [:end_date, 2018]
+[2021-05-16 7:03:13.989772] [debug] query_data: []
+[2021-05-16 7:03:34.072665] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:04:14.213316] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:04:14.219785] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:04:14.221724] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:04:14.221869] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:04:14.221920] [debug] [:vat, 0.79]
+[2021-05-16 7:04:14.222075] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:04:14.222280] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:04:14.225521] [debug] query_data: [{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:04:53.208058] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:04:53.214184] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:04:53.217102] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:04:53.217214] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:04:53.217267] [debug] [:vat, 0.79]
+[2021-05-16 7:04:53.217304] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:04:53.217333] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:04:53.220221] [debug] query_data: [{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:05:18.320892] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:05:18.325206] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:05:18.326699] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:05:18.326817] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:05:18.326862] [debug] [:vat, 0.79]
+[2021-05-16 7:05:18.326895] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:05:18.326917] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:05:18.330234] [debug] query_data: [{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:05:18.332133] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:05:18.338953] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:05:18.339127] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:05:18.339181] [debug] [:vat, 0.79]
+[2021-05-16 7:05:18.339215] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:05:18.339304] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:05:18.344223] [debug] query_data: [{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:06:13.084187] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:13.088546] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:13.090217] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:06:13.090344] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:06:13.090394] [debug] [:vat, 0.79]
+[2021-05-16 7:06:13.090430] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:06:13.090454] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:06:13.092843] [debug] query_data: [{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:06:13.094722] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:13.096123] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:06:13.096223] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:06:13.096266] [debug] [:vat, 0.79]
+[2021-05-16 7:06:13.096292] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:06:13.096312] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:06:13.099937] [debug] query_data: [{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:06:29.157694] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:29.163768] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:29.165695] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:06:29.165811] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:06:29.165858] [debug] [:vat, 0.79]
+[2021-05-16 7:06:29.165896] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:06:29.165923] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:06:29.167836] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:06:29.169745] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:29.172353] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:06:29.172468] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:06:29.172498] [debug] [:vat, 0.79]
+[2021-05-16 7:06:29.172518] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:06:29.172533] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:06:29.176388] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:06:49.817518] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:49.827033] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:49.828541] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:06:49.828635] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:06:49.829163] [debug] [:vat, 0.79]
+[2021-05-16 7:06:49.829315] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:06:49.829746] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:06:49.831819] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:06:49.832329] [debug] ./csv/turnover_per_brand.csv
+[2021-05-16 7:06:49.835319] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:49.836574] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:06:49.836654] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:06:49.836687] [debug] [:vat, 0.79]
+[2021-05-16 7:06:49.836713] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:06:49.839404] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:06:49.844084] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:06:49.847131] [debug] ./csv/turnover_per_day.csv
+[2021-05-16 7:06:54.597723] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:54.602282] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:54.604104] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:06:54.604223] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:06:54.604269] [debug] [:vat, 0.79]
+[2021-05-16 7:06:54.604305] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:06:54.604327] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:06:54.607021] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:06:54.608191] [debug] ./csv/turnover_per_brand.csv
+[2021-05-16 7:06:54.610158] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:06:54.613285] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:06:54.613462] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:06:54.613509] [debug] [:vat, 0.79]
+[2021-05-16 7:06:54.613539] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:06:54.613568] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:06:54.617602] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:06:54.618073] [debug] ./csv/turnover_per_day.csv
+[2021-05-16 7:07:11.128319] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:07:11.132500] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:07:11.133459] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:07:11.133531] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:07:11.133559] [debug] [:vat, 0.79]
+[2021-05-16 7:07:11.133584] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:07:11.133599] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:07:11.135376] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:07:11.136029] [debug] ./csv/turnover_per_brand.csv
+[2021-05-16 7:07:11.137918] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:07:11.141817] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:07:11.141927] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:07:11.142033] [debug] [:vat, 0.79]
+[2021-05-16 7:07:11.142270] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:07:11.142333] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:07:11.148641] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:07:11.149537] [debug] ./csv/turnover_per_day.csv
+[2021-05-16 7:07:27.171005] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:07:27.175215] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:07:27.177115] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:07:27.177239] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:07:27.177273] [debug] [:vat, 0.79]
+[2021-05-16 7:07:27.177298] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:07:27.177314] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:07:27.180375] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:07:27.180917] [debug] ./csv/turnover_per_brand.csv
+[2021-05-16 7:07:27.181581] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:07:27.184715] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:07:27.184794] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:07:27.184820] [debug] [:vat, 0.79]
+[2021-05-16 7:07:27.184842] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:07:27.184859] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:07:27.188977] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:07:27.189404] [debug] ./csv/turnover_per_day.csv
+[2021-05-16 7:08:56.001617] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:08:56.007636] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:08:56.009326] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:08:56.009444] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:08:56.009484] [debug] [:vat, 0.79]
+[2021-05-16 7:08:56.009515] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:08:56.009533] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:08:56.011312] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:08:56.011775] [debug] ./csv/turnover_per_brand.csv
+[2021-05-16 7:08:56.019192] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:08:56.020780] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:08:56.020876] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:08:56.020914] [debug] [:vat, 0.79]
+[2021-05-16 7:08:56.020956] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:08:56.020979] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:08:56.024955] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:08:56.025538] [debug] ./csv/turnover_per_day.csv
+[2021-05-16 7:09:15.859138] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:09:15.865494] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:09:15.867990] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:09:15.868129] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:09:15.868215] [debug] [:vat, 0.79]
+[2021-05-16 7:09:15.868269] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:09:15.868299] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:09:15.871844] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:09:15.872499] [debug] ./csv/turnover_per_brand.csv
+[2021-05-16 7:09:15.874680] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:09:15.880327] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:09:15.880422] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:09:15.880460] [debug] [:vat, 0.79]
+[2021-05-16 7:09:15.880491] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:09:15.880518] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:09:15.887052] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:09:15.887639] [debug] ./csv/turnover_per_day.csv
+[2021-05-16 7:09:42.905873] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:09:42.916662] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:09:42.918663] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:09:42.918766] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:09:42.918860] [debug] [:vat, 0.79]
+[2021-05-16 7:09:42.920207] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:09:42.920284] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:09:42.922457] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:09:42.922954] [debug] ./csv/turnover_per_brand.csv
+[2021-05-16 7:09:42.924978] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:09:42.933371] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:09:42.933451] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:09:42.935626] [debug] [:vat, 0.79]
+[2021-05-16 7:09:42.935728] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:09:42.935798] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:09:42.940403] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:09:42.940917] [debug] ./csv/turnover_per_day.csv
+[2021-05-16 7:09:55.810558] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:09:55.815295] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:09:55.816744] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:09:55.816868] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:09:55.816917] [debug] [:vat, 0.79]
+[2021-05-16 7:09:55.816956] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:09:55.816982] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:09:55.819027] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:09:55.821140] [debug] ./csv/turnover_per_brand.csv
+[2021-05-16 7:09:55.824301] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:09:55.828151] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:09:55.828386] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:09:55.828440] [debug] [:vat, 0.79]
+[2021-05-16 7:09:55.828490] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:09:55.828517] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:09:55.832295] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:09:55.832808] [debug] ./csv/turnover_per_day.csv
+[2021-05-16 7:10:17.689100] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:10:17.694413] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:10:17.696439] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:10:17.696590] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:10:17.696665] [debug] [:vat, 0.79]
+[2021-05-16 7:10:17.696739] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:10:17.696796] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:10:17.699634] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:10:17.700294] [debug] ./csv/turnover_per_brand.csv
+[2021-05-16 7:10:17.702188] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:10:17.705039] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:10:17.705115] [debug] params: {":vat":"0.79",":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:10:17.705144] [debug] [:vat, 0.79]
+[2021-05-16 7:10:17.705176] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:10:17.705192] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:10:17.710484] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:10:17.710891] [debug] ./csv/turnover_per_day.csv
+[2021-05-16 7:25:37.693638] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:25:37.708524] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:25:37.709431] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:25:37.709549] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:25:37.709593] [debug] [:vat, 0.79]
+[2021-05-16 7:25:37.709655] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:25:37.709676] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:25:37.711153] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:25:37.711543] [debug] ./csv/turnover_per_brand.csv
+[2021-05-16 7:25:37.713254] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:25:37.714526] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:25:37.714600] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:25:37.714628] [debug] [:vat, 0.79]
+[2021-05-16 7:25:37.714658] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:25:37.714672] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:25:37.719430] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:25:37.719886] [debug] ./csv/turnover_per_day.csv
+[2021-05-16 7:25:41.167692] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:25:41.172429] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:25:41.173813] [debug] SELECT b.name, SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN :start_date AND :end_date)
+            GROUP BY b.id
+[2021-05-16 7:25:41.173913] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:25:41.173957] [debug] [:vat, 0.79]
+[2021-05-16 7:25:41.173990] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:25:41.174015] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:25:41.176527] [debug] query_data: [["Brand Name","Turnover (excluding VAT)"],{"name":"O-Brand","turnover":"75910.5549"},{"name":"T-Brand","turnover":"119819.42640000001"},{"name":"R-Brand","turnover":"133818.0131"},{"name":"I-Brand","turnover":"79402.8842"},{"name":"U-Brand","turnover":"162456.6191"}]
+[2021-05-16 7:25:41.176996] [debug] ./csv/turnover_per_brand.csv
+[2021-05-16 7:25:41.178646] [debug] 127.0.0.1 otrium root dMax99@#
+[2021-05-16 7:25:41.179608] [debug] SELECT DATE(g.`date`) as 'date', SUM(g.turnover) * :vat as turnover
+            FROM gmv g
+            JOIN brands b ON g.brand_id = b.id
+            WHERE (g.`date` BETWEEN DATE(:start_date) AND DATE(:end_date))
+            GROUP BY g.`date`
+            ORDER BY DATE(g.`date`)
+[2021-05-16 7:25:41.179694] [debug] params: {":vat":0.79,":start_date":"2018-05-01",":end_date":"2018-05-07"}
+[2021-05-16 7:25:41.179733] [debug] [:vat, 0.79]
+[2021-05-16 7:25:41.179877] [debug] [:start_date, 2018-05-01]
+[2021-05-16 7:25:41.179917] [debug] [:end_date, 2018-05-07]
+[2021-05-16 7:25:41.183587] [debug] query_data: [["Date","Turnover (excluding VAT)"],{"date":"2018-05-01","turnover":"79577.1977"},{"date":"2018-05-02","turnover":"74690.7238"},{"date":"2018-05-03","turnover":"73558.44840000001"},{"date":"2018-05-04","turnover":"102528.175"},{"date":"2018-05-05","turnover":"94583.5874"},{"date":"2018-05-06","turnover":"80209.5374"},{"date":"2018-05-07","turnover":"66259.828"}]
+[2021-05-16 7:25:41.183999] [debug] ./csv/turnover_per_day.csv
+[2021-05-16 7:36:16.790157] [debug] 127.0.0.1 otrium root password
