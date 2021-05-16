@@ -20,6 +20,7 @@ composer install
 
 - import the database into mysql
 - Then update the database information in "config.php" file.
+- Make sure you give propper permission to "csv" and "logs" directory.
 
 # How to run 
 

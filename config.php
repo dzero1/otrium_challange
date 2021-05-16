@@ -8,7 +8,7 @@ $CFG = [
     'dbhost' => '127.0.0.1',
     'dbname' => 'otrium',
     'dbuser' => 'root',
-    'dbpass' => 'password',
+    'dbpass' => 'dMax99@#',
 
     // Export settings
     'export_location' => './csv',
